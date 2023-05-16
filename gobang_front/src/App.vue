@@ -6,33 +6,15 @@
         <span style="margin-left: 5px">五子棋实验对战测试平台</span>
       </div>
       <el-menu class="el-aside-menu">
-        <el-scrollbar>
-          <el-sub-menu index="1">
-            <template #title><span>网站介绍</span></template>
-            <el-menu-item-group>
-              <!-- <router-link
-                ><el-menu-item index="1-1">网站说明</el-menu-item></router-link
-              >
-              <router-link
-                ><el-menu-item index="1-2">游戏介绍</el-menu-item></router-link
-              >
-              <router-link
-                ><el-menu-item index="1-3"
-                  >代码编写指南</el-menu-item
-                ></router-link
-              > -->
-            </el-menu-item-group>
-          </el-sub-menu>
-          <!-- <router-link
-            ><el-menu-item index="2">实验关卡</el-menu-item></router-link
-          >
-          <router-link
-            ><el-menu-item index="3">游戏大厅</el-menu-item></router-link
-          >
-          <router-link
-            ><el-menu-item index="4">排行榜</el-menu-item></router-link
-          > -->
-        </el-scrollbar>
+        <router-link :to="{ name: 'platform_intro' }"
+          ><el-menu-item index="1">网站说明</el-menu-item></router-link
+        >
+        <router-link :to="{ name: 'round_index' }"
+          ><el-menu-item index="2">实验关卡</el-menu-item></router-link
+        >
+        <router-link :to="{ name: 'pk_index' }"
+          ><el-menu-item index="3">游戏大厅</el-menu-item></router-link
+        >
       </el-menu>
     </el-aside>
     <el-container>
@@ -50,32 +32,30 @@
             ></span>
             <template #dropdown>
               <el-dropdown-menu>
-                <!-- <router-link
+                <router-link :to="{ name: 'personal_space' }"
                   ><el-dropdown-item>个人空间</el-dropdown-item></router-link
-                >  -->
+                >
                 <el-dropdown-item>退出</el-dropdown-item></el-dropdown-menu
               ></template
             >
           </el-dropdown>
-          <!-- <router-link
+          <router-link :to="{ name: 'user_account_login' }"
             ><el-menu-item index="1"
               ><span>登录</span></el-menu-item
             ></router-link
           >
-          <router-link
+          <router-link :to="{ name: 'user_account_register' }"
             ><el-menu-item index="2"
               ><span>注册</span></el-menu-item
             ></router-link
-          > -->
+          >
         </el-menu></el-header
       >
       <!--介绍页内容-->
       <el-main
         ><el-scrollbar>
-          <!-- <router-view :key="$route.fullPath"></router-view> -->
-          这里显示以下介绍页内容
-        </el-scrollbar></el-main
-      >
+          <router-view :key="$route.fullPath"></router-view> </el-scrollbar
+      ></el-main>
     </el-container>
   </el-container>
 </template>
@@ -113,8 +93,7 @@ body {
   margin: 0;
   height: 100%;
 }
-
-/* .aside-header {
+.aside-header {
   height: 60px;
   background-color: rgb(5, 25, 41);
   color: white;
@@ -123,6 +102,7 @@ body {
   justify-content: center;
   font-weight: 600;
 }
+/*
 
 .el-aside-menu {
   height: calc(100vh - 60px);
