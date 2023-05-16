@@ -46,8 +46,7 @@
                 <User />
               </el-icon>
               <span class="username">{{ $store.state.user.username }}</span>
-              <el-icon>
-                <CaretBottom /> </el-icon
+              <el-icon> <CaretBottom /> </el-icon
             ></span>
             <template #dropdown>
               <el-dropdown-menu
@@ -82,7 +81,6 @@
 </template>
 
 <script>
-// import { ElNotification } from "element-plus";
 export default {
   name: "App",
   components: {},

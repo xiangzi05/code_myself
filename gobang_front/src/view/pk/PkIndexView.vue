@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>游戏厅对弈首页</div>
 </template>
     
   <script>

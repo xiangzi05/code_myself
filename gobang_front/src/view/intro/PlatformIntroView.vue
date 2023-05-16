@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>平台说明页</div>
 </template>
   
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>游戏介绍页</div>
 </template>
   
   <script>

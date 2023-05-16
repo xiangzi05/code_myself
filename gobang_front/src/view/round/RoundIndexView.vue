@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>关卡模式首页</div>
 </template>
   
   <script>
