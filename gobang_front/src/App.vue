@@ -10,7 +10,7 @@
           <el-sub-menu index="1">
             <template #title><span>网站介绍</span></template>
             <el-menu-item-group>
-              <router-link
+              <!-- <router-link
                 ><el-menu-item index="1-1">网站说明</el-menu-item></router-link
               >
               <router-link
@@ -20,10 +20,10 @@
                 ><el-menu-item index="1-3"
                   >代码编写指南</el-menu-item
                 ></router-link
-              >
+              > -->
             </el-menu-item-group>
           </el-sub-menu>
-          <router-link
+          <!-- <router-link
             ><el-menu-item index="2">实验关卡</el-menu-item></router-link
           >
           <router-link
@@ -31,7 +31,7 @@
           >
           <router-link
             ><el-menu-item index="4">排行榜</el-menu-item></router-link
-          >
+          > -->
         </el-scrollbar>
       </el-menu>
     </el-aside>
@@ -49,15 +49,15 @@
               <el-icon> <CaretBottom /> </el-icon
             ></span>
             <template #dropdown>
-              <el-dropdown-menu
-                ><router-link
+              <el-dropdown-menu>
+                <!-- <router-link
                   ><el-dropdown-item>个人空间</el-dropdown-item></router-link
-                >
+                >  -->
                 <el-dropdown-item>退出</el-dropdown-item></el-dropdown-menu
               ></template
             >
           </el-dropdown>
-          <router-link
+          <!-- <router-link
             ><el-menu-item index="1"
               ><span>登录</span></el-menu-item
             ></router-link
@@ -66,7 +66,7 @@
             ><el-menu-item index="2"
               ><span>注册</span></el-menu-item
             ></router-link
-          >
+          > -->
         </el-menu></el-header
       >
       <!--介绍页内容-->
