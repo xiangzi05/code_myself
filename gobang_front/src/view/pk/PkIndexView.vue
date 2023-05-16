@@ -1,15 +1,15 @@
 <template>
   <div></div>
 </template>
-  
+    
   <script>
 export default {
-  name: "FunctionIntroView",
+  name: "PkIndexView",
   components: {},
   setup() {
     return {};
   },
 };
 </script>
-  
-  <style scoped ></style>
+    
+    <style scoped ></style>
