@@ -53,14 +53,14 @@ const routes = [
     path: "/pk",
     name: "pk_index",
     component: PkIndexView,
-    meta: { description: "游戏厅首页", isRoot: false },
+    meta: { description: "游戏对战", isRoot: false },
   },
   //实验闯关
   {
     path: "/round",
     name: "round_index",
     component: RoundIndexView,
-    meta: { description: "闯关首页", isRoot: false },
+    meta: { description: "实验闯关", isRoot: false },
   },
   //页面报错提示
   {
