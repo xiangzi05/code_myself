@@ -1,6 +1,6 @@
 // import $ from "jquery";
 // import store from ".";
-// import router from "@/router";
+import router from "@/router";
 
 //测试修改username值""为"实验品",修改islogin为true
 export default {
@@ -33,9 +33,22 @@ export default {
       //本地储存用户记录
       localStorage.setItem("user", JSON.stringify(user));
     },
+    //logout同步操作
+    logout(state) {
+      state.id = 0;
+      state.username = "";
+      state.is_login = false;
+    },
   },
   // 异步操作mutation
-  actions: {},
+  actions: {
+    //登出
+    logout(context) {
+      localStorage.removeItem("user");
+      context.commit("logout");
+      router.push({ name: "user_account_login" });
+    },
+  },
   //module,分割嵌套子模块
   modules: {},
 };

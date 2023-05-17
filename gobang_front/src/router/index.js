@@ -21,7 +21,7 @@ const routes = [
     path: "/intro",
     name: "platform_intro",
     component: PlatformIntroView,
-    meta: { description: "网站介绍", isRoot: true },
+    meta: { description: "网站说明", isRoot: true },
   },
   //user用户页
   {
