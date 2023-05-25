@@ -83,10 +83,9 @@
         </el-menu></el-header
       >
       <!--介绍页内容-->
-      <el-main class="main"
-        ><el-scrollbar class="main-scrollbar">
-          <router-view :key="$route.fullPath"></router-view> </el-scrollbar
-      ></el-main>
+      <el-main class="main">
+        <router-view :key="$route.fullPath"></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
