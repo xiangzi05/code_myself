@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import store from "@/store";
 import PlatformIntroView from "@/views/intro/PlatformIntroView";
 import UserAccountLoginView from "@/views/user/UserAccountLoginView";
 import UserAccountRegisterView from "@/views/user/UserAccountRegisterView";
@@ -14,53 +13,53 @@ const routes = [
     path: "/",
     name: "home",
     redirect: "/intro",
-    meta: { description: "首页", isRoot: true },
+    meta: { description: "首页" },
   },
   //intro介绍页
   {
     path: "/intro",
     name: "platform_intro",
     component: PlatformIntroView,
-    meta: { description: "网站说明", isRoot: true },
+    meta: { description: "网站说明" },
   },
   //user用户页
   {
     path: "/user/login",
     name: "user_account_login",
     component: UserAccountLoginView,
-    meta: { description: "登录", isRoot: false },
+    meta: { description: "登录" },
   },
   {
     path: "/user/register",
     name: "user_account_register",
     component: UserAccountRegisterView,
-    meta: { description: "注册", isRoot: false },
+    meta: { description: "注册" },
   },
   {
     path: "/user/space",
     name: "personal_space",
     component: PersonalSpaceView,
-    meta: { description: "个人空间", isRoot: false },
+    meta: { description: "个人空间" },
   },
   {
     path: "/user/update",
     name: "user_account_update",
     component: UserAccountUpdateView,
-    meta: { description: "个人信息修改", isRoot: false },
+    meta: { description: "个人信息修改" },
   },
   //游戏大厅
   {
     path: "/pk",
     name: "pk_index",
     component: PkIndexView,
-    meta: { description: "游戏对战", isRoot: false },
+    meta: { description: "游戏对战" },
   },
   //实验闯关
   {
     path: "/round",
     name: "round_index",
     component: RoundIndexView,
-    meta: { description: "实验闯关", isRoot: false },
+    meta: { description: "实验闯关" },
   },
   //页面报错提示
   {
@@ -69,7 +68,6 @@ const routes = [
     component: NotFound,
     meta: {
       description: "",
-      isRoot: true,
     },
   },
   {
@@ -78,9 +76,5 @@ const routes = [
   },
 ];
 const router = createRouter({ history: createWebHistory(), routes });
-router.beforeEach((to) => {
-  console.log("router", router.currentRoute.value.fullpath);
-  if (to.meta.isRoot) store.commit("updateBackPage", "");
-});
 
 export default router;
