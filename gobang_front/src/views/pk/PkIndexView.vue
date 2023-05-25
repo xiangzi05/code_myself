@@ -8,7 +8,13 @@
         </div>
       </template>
       <el-button-group>
-        <el-button text type="primary">人人对弈</el-button>
+        <el-button text type="primary"
+          ><router-link
+            class="link-text"
+            :to="{ name: 'play_ground', query: { gameType } }"
+            >人人对弈</router-link
+          ></el-button
+        >
         <el-button text type="primary" @click="showCodeChoiceDialog = true"
           >人机对弈</el-button
         >
@@ -69,10 +75,13 @@
     
   <script>
 import { ref } from "vue";
+import $ from "jquery";
+
 export default {
   name: "PkIndexView",
   components: {},
   setup() {
+    const gameType = ref(0);
     const showCodeChoiceDialog = ref(false);
     //模拟数据
     const tableData = [
@@ -83,7 +92,21 @@ export default {
       { rank: 4, username: "cs", score: 1500 },
       { rank: 6, username: "wss", score: 1480 },
     ];
-    return { showCodeChoiceDialog, tableData };
+    const startMatchRoom = async () => {
+      $.ajax({
+        type: "post",
+        url: "/pk/match",
+        data: {
+          gameType: gameType,
+        },
+        dataType: "dataType",
+        success: function (response) {
+          console.log("gameType:", gameType, "success的response:", response);
+          console.log("当前页面:", this.$route.fullPath);
+        },
+      });
+    };
+    return { gameType, showCodeChoiceDialog, startMatchRoom, tableData };
   },
 };
 </script>

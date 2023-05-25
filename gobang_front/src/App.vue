@@ -165,6 +165,7 @@ body {
 }
 .link-text {
   text-decoration: none;
+  color: #409eff;
 }
 .aside-header {
   height: 60px;

@@ -5,6 +5,8 @@ import UserAccountRegisterView from "@/views/user/UserAccountRegisterView";
 import PersonalSpaceView from "@/views/user/PersonalSpaceView";
 import UserAccountUpdateView from "@/views/user/UserAccountUpdateView";
 import PkIndexView from "@/views/pk/PkIndexView";
+import MatchRoomView from "@/views/pk/MatchRoomView";
+import PlayGroundView from "@/views/pk/PlayGroundView";
 import RoundIndexView from "@/views/round/RoundIndexView";
 import NotFound from "@/views/error/NotFound";
 
@@ -53,6 +55,18 @@ const routes = [
     name: "pk_index",
     component: PkIndexView,
     meta: { description: "游戏对战" },
+  },
+  {
+    path: "/pk/match",
+    name: "match_room",
+    component: MatchRoomView,
+    meta: { description: "在线匹配" },
+  },
+  {
+    path: "/pk/play",
+    name: "play_ground",
+    component: PlayGroundView,
+    meta: { description: "棋局对战" },
   },
   //实验闯关
   {
